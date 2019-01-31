@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 		echo "<div class='alert alert-success'>Information Successfully Saved</div>";
 	} else {
 		
-		echo "<div class='alert alert-danger'>Lead Submission Failed !</div>";
+		 
 	}
 	
 }
