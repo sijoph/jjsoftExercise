@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 			<div class="form-group">
 			  <label for="fname">First Name:</label>
 			  <input type="text" class="form-control" id="fname" maxlength="20" placeholder="Enter First Name" name="fname" onkeyup="saveLeadFormdata()" required>
-			  <input type="hidden" id="uniqid" name="uniqid" value="<?=uniqid()?>">
+			  <input type="hidden" id="uniqid" name="uniqid" value="">
 			</div>
 			
 			<div class="form-group">
