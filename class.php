@@ -6,7 +6,7 @@ define('DBname','prayanan_jjsoft_cma');
 
 class DB
 {
-	
+	/*database connection*/
 	public $con;
 	
 	public function __construct(){
@@ -20,6 +20,7 @@ class DB
 	
 }
 
+/*class for lead operations*/
 class lead
 {
 	public $db;
