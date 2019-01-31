@@ -43,7 +43,34 @@ class lead
 		 
 	}
 	
+	/* get all leads on agent dashboard */
+	public function agent_dashboard(){
+ 		$allLeads = mysqli_query($this->db->getCon(),"select uniqid, fname, lname, email, created_date from leads ORDER BY fname ASC") or die(mysql_error());
+ 		$result =	mysqli_num_rows($allLeads);
+		if($result==0){
+			
+			echo "<tr><td colspan='4'>No Details Found !</td></tr>";
+			
+		}
+		else
+		{
+			
+			while($lead = mysqli_fetch_assoc($allLeads))
+			{
+			?>
+			  <tr>
+				<td><?=$lead['fname'].' '.$lead['lname']?></td>
+				<td><?=$lead['email']?></td>
+				<td><?=$lead['created_date']?></td>
+				<td><a href="lead_details.php?luid=<?=$lead['uniqid']?>"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+			  </tr>
+			<?php
+			}
+		}
+		 
+	}
 	
+	 
 	  
 	
 }
