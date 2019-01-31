@@ -1,7 +1,6 @@
 <?php 
 include('header.php'); /*include header*/
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+ 
 include_once "class.php";
 /*form submit : post*/  
 $lead = new lead; /*lead object creation*/
@@ -14,16 +13,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 		echo "<div class='alert alert-success'>Information Successfully Saved</div>";
 	} else {
 		
-		 fa0e84eef120d3734bfe47fb622a689216975341
+		echo "<div class='alert alert-danger'>Lead Submission Failed !</div>";
 	}
 	
 }
 
  
 ?>
-
  
-	
 	<h2>Enter Your Lead Details</h2>
 	<div id="form_info"></div>
 	  <form class="" action="" method="post">
@@ -31,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 			<div class="form-group">
 			  <label for="fname">First Name:</label>
 			  <input type="text" class="form-control" id="fname" maxlength="20" placeholder="Enter First Name" name="fname" onkeyup="saveLeadFormdata()" required>
-			  <input type="hidden" id="uniqid" name="uniqid" value="">
+			  <input type="hidden" id="uniqid" name="uniqid" value="<?=uniqid()?>">
 			</div>
 			
 			<div class="form-group">
