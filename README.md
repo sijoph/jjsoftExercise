@@ -1,7 +1,4 @@
-# jjsoftExercise
-
-Comparative Market Analysis (CMA)
-
+# JJSOFT Exercise (Comparative Market Analysis (CMA))
 
 Technologies Used : Core PHP , HTML, Ajax, jQuery, Bootstrap and MySql
 Codding Pattern : Classes and Objects
