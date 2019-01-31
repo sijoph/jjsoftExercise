@@ -1,6 +1,7 @@
 <?php 
 include('header.php'); /*include header*/
- 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include_once "class.php";
 /*form submit : post*/  
 $lead = new lead; /*lead object creation*/
@@ -56,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 			  <input type="text" class="form-control" id="squarefoot" maxlength="10" placeholder="Enter Home Square Footage" name="squarefoot" onkeyup="saveLeadFormdata()" required>
 			</div>
 		 
-			<button type="submit" class="btn btn-default">Submit</button>
+			<button type="submit" class="btn btn-default">Save Lead</button>
 		</div>
 	  </form>
 	
