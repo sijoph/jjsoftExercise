@@ -70,7 +70,33 @@ class lead
 		 
 	}
 	
-	 
+	/* get lead details on agent dashboard */
+	public function single_lead_details($uniqid){
+ 		$singleLead = mysqli_query($this->db->getCon(),"select * from leads where uniqid='$uniqid'") or die(mysql_error());
+ 		$result =	mysqli_num_rows($singleLead);
+		if($result==0){
+			
+			echo "<tr><td colspan='6'>Invalid Request !</td></tr>";
+			
+		}
+		else
+		{
+			
+			$lead = mysqli_fetch_array($singleLead);
+			?> 
+			  <tr>
+				<td><?=$lead['fname'].' '.$lead['lname']?></td>
+				<td><?=$lead['email']?></td>
+				<td><?=$lead['phone']?></td>
+				<td><?=$lead['address']?></td>
+				<td><?=$lead['squarefoot']?></td>
+				<td><?=$lead['created_date']?></td>
+ 			  </tr>
+			<?php
+			
+		}
+		 
+	}
 	  
 	
 }
