@@ -17,7 +17,7 @@ $lead = new lead; /*lead object creation*/
 			
 				<thead>
 				  <tr>
-					<th>Full Name</th>
+					<th>Full Name</th> 
 					<th>Email Address</th>
 					<th>Created Date</th>
 					<th>Action</th>
@@ -49,5 +49,6 @@ else
 	<?php
 	
 }
- include('footer.php');	
+
+ include('footer.php');	/*footer*/
 ?>
