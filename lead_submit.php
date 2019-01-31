@@ -1,6 +1,6 @@
 <?php
 include_once "class.php";
-$lead = new lead;
+$lead = new lead;/*lead object creation*/
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 	
  	$created_date = date('Y-m-d H:i:s');
