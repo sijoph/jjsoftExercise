@@ -2,7 +2,7 @@
 	function saveLeadFormdata()
 	{
 		
-		 
+		var uniqid=$("#uniqid").val();
 		var fname=$("#fname").val();
 		var lname=$("#lname").val();
 		var email=$("#email").val();
@@ -13,11 +13,18 @@
 		$.ajax({
 			type:"post",
 			url:"lead_submit.php", 
-			data:"fname="+fname+"&lname="+lname+"&email="+email+"&phone="+phone+"&address="+address+"&squarefoot="+squarefoot,
+			data:"uniqid="+uniqid+"&fname="+fname+"&lname="+lname+"&email="+email+"&phone="+phone+"&address="+address+"&squarefoot="+squarefoot,
  			success:function(data){
 				
 				$("#form_info").html(data);
 				
+				/* Fade out the message after 3 seconds */
+				setTimeout(function ()
+				{
+					$('#form_info').animate({
+						opacity: 0
+					}, 250);
+				}, 3000);
 				
 			}
 
